@@ -4,6 +4,10 @@ import { CORE_CONCEPTS } from '../../data.js';
 
 
 export default function Main() {
+    function handleSelect () {
+      console.log("selected!")
+    }
+
     return (
       <main>
         <section id="core-concepts">
@@ -22,11 +26,12 @@ export default function Main() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton>Components</TabButton>
-            <TabButton>JSX</TabButton>
-            <TabButton>Props</TabButton>
-            <TabButton>State</TabButton>
+            <TabButton onSelect={handleSelect}>Components</TabButton>
+            <TabButton onSelect={handleSelect}>JSX</TabButton>
+            <TabButton onSelect={handleSelect}>Props</TabButton>
+            <TabButton onSelect={handleSelect}>State</TabButton>
           </menu>
+          Dynamic Content
         </section>
       </main>
     )
