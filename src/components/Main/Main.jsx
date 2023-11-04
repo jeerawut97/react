@@ -6,15 +6,10 @@ import { CORE_CONCEPTS } from '../../data.js';
 
 
 export default function Main() {
-<<<<<<< HEAD
-    function handleSelect(selectedButton) {
-      console.log(selectedButton)
-=======
     const [ selectedTopic, setSelectedTopic ] = useState('Please click a button!');
 
     function handleSelect(selectedTopic) {
       setSelectedTopic(selectedTopic);
->>>>>>> 6cd00faf4cf4a0001b8efb6ba9bb57a5a503dde5
     }
 
     return (
