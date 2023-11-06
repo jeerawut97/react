@@ -3,6 +3,7 @@ import { EXAMPLES } from '../../data.js';
 import Section from '../Section/Section.jsx';
 import CoreConcepts from '../CoreConcept/CoreConcept.jsx';
 import TabButton from '../TabButton/TabButton.jsx';
+import Tabs from '../Tabs.jsx';
 
 
 export default function Examples() {
@@ -26,9 +27,10 @@ export default function Examples() {
 
     return (
         <Section title="Examples" id="examples">
-          <menu>
-            <CoreConcepts />
-            <TabButton
+          <Tabs
+            buttons={
+              <>
+                <TabButton
               isSelected={selectedTopic === 'components'}
               onClick={() => handleSelect('components')}
             >Components</TabButton>
@@ -44,6 +46,11 @@ export default function Examples() {
               isSelected={selectedTopic === 'state'}
               onClick={() => handleSelect('state')}>
               State</TabButton>
+              </>
+            }
+          ></Tabs>
+          <menu>
+            <CoreConcepts />
           </menu>
           {tabContent}
         </Section>
